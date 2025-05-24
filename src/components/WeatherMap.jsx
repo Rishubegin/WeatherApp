@@ -32,7 +32,7 @@ const WeatherMap = ({ data }) => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={center}></Marker>
+        {/* <Marker position={center}></Marker> */}
       </MapContainer>
     </>
   ) : (
