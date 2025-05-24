@@ -41,7 +41,7 @@ export const LocationAndTime = ({ data }) => {
           <img
             src={darkMode ? LIGHT_LOCATION_ICON : LOCATION_ICON}
             className="w-6 sm:w-8 hidden sm:inline"
-            alt="location-icon"
+            alt=""
           />
           <div className="">
             <h2 className="flex text-pretty" id="city-name">

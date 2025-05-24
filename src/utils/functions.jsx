@@ -36,7 +36,7 @@ export const fetchWeatherdata = async (lat, lon, units) => {
 
 export const fetchLatLon = async (cityName, countryCode) => {
   const data = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${cityName},${countryCode}&limit=10&appid=${API_KEY}`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${cityName},${countryCode}&limit=10&appid=${API_KEY}`
   );
   const json = await data.json();
 
@@ -53,7 +53,7 @@ export const fetchLatLon = async (cityName, countryCode) => {
 
 export const fetchAQI = async (lat, lon) => {
   const data = await fetch(
-    `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`
+    `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`
   );
   const json = await data.json();
   return json;
@@ -61,7 +61,7 @@ export const fetchAQI = async (lat, lon) => {
 
 export const fetchHourlyData = async (lat, lon) => {
   const hourlyData = await fetch(
-    `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
+    `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
   );
   const json = await hourlyData.json();
   return json;
