@@ -69,7 +69,7 @@ export const fetchHourlyData = async (lat, lon) => {
 
 export const fetchNearByCities = async (lat, lon) => {
   const cityData = await fetch(
-    `http://api.geonames.org/findNearbyPlaceNameJSON?lat=${lat}&lng=${lon}&cities=cities15000&radius=200&maxRows=120&username=${USERNAME}`
+    `https://cors-anywhere.herokuapp.com/http://api.geonames.org/findNearbyPlaceNameJSON?lat=${lat}&lng=${lon}&cities=cities15000&radius=200&maxRows=120&username=${USERNAME}`
   );
   const json = await cityData.json();
   return await json;
