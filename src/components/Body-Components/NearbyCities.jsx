@@ -78,7 +78,7 @@ const City = ({ sendData, cityData, setCitiesData }) => {
           ? cityData.name.slice(0, 8) + "..."
           : cityData.name}
         <img
-          src={`http://purecatamphetamine.github.io/country-flag-icons/3x2/${cityData.sys.country}.svg`}
+          src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${cityData.sys.country}.svg`}
           alt=""
           className="w-4 ml-2 sm:w-8 sm:ml-4"
         />
