@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div
-      className={`flex flex-col items-center bg-gray-50 text-[#1a1814] dark:bg-black dark:text-white ${
+      className={`flex flex-col items-center bg-[var(--bg)] text-[var(--text)] ${
         darkMode && "dark"
       }`}
     >
