@@ -21,7 +21,7 @@ const Header = ({ darkMode, setDarkMode }) => {
   };
 
   return (
-    <div className="relative overflow-visible flex p-3 justify-between items-center h-20 sm:h-auto w-screen bg-gray-300 dark:bg-black">
+    <div className="relative overflow-visible flex p-3 justify-between items-center h-20 sm:h-auto w-screen bg-[var(--navbar)]">
       <div className="flex">
         <div>
           <img
@@ -92,7 +92,7 @@ const Header = ({ darkMode, setDarkMode }) => {
         onMouseEnter={() => setIsActive(true)}
         onMouseLeave={() => setIsActive(false)}
       >
-        <nav className="mt-5 bg-gray-300 z-100 dark:bg-gray-700">
+        <nav className="mt-5 bg-[var(--navbar)] z-100 ">
           <ul className="flex flex-col items-center w-full text-xl">
             <Link to="/" className="hover:underline mt-2 mb-2">
               Home
