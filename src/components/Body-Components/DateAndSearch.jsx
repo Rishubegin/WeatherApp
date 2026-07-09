@@ -117,7 +117,7 @@ const DateAndSearch = ({ sendData }) => {
             onFocus={() => {
               setIsHide(true);
             }}
-            className="w-full border-2 outline-none border-none bg-gray-300 text-l sm:text-xl h-10 sm:h-13 p-3 rounded-l-md dark:bg-gray-700"
+            className="w-full border-2 outline-none border-none bg-blue-100 text-l sm:text-xl h-10 sm:h-13 p-3 rounded-l-md dark:bg-gray-700"
             id="input-city"
           />
           <button
@@ -126,7 +126,7 @@ const DateAndSearch = ({ sendData }) => {
               handleFetchLatLon(addr[0], addr[1]);
               setIsHide(false);
             }}
-            className="transition duration-200 ease-out cursor-pointer bg-gray-300 h-10 sm:h-13 rounded-r-md pr-2 pl-2 dark:bg-gray-700"
+            className="transition duration-200 ease-out cursor-pointer bg-blue-100 h-10 sm:h-13 rounded-r-md pr-2 pl-2 dark:bg-gray-700"
           >
             <img
               src={darkMode ? LIGHT_SEARCH_ICON : SEARCH_ICON}
@@ -136,7 +136,7 @@ const DateAndSearch = ({ sendData }) => {
           </button>
         </div>
         <div
-          className={`bg-gray-300 p-2 max-h-50 h-fit w-full flex flex-col justify-around absolute top-12 sm:top-15 rounded-md z-10 text-md sm:text-xl overflow-scroll dark:bg-gray-700 ${
+          className={`bg-blue-100 p-2 max-h-50 h-fit w-full flex flex-col justify-around absolute top-12 sm:top-15 rounded-md z-10 text-md sm:text-xl overflow-scroll dark:bg-gray-700 ${
             searchResult ? (isHide ? "hidden" : "") : "hidden"
           }`}
         >
@@ -174,7 +174,7 @@ const DateAndSearch = ({ sendData }) => {
         <span className="font-medium">{isCelsius ? "°C" : "°F"}</span>
         <button
           onClick={toggle}
-          className={`w-12 h-6 sm:w-16 sm:h-8 flex items-center rounded-full p-1 transition-colors duration-300 bg-gray-300 dark:bg-gray-700`}
+          className={`w-12 h-6 sm:w-16 sm:h-8 flex items-center rounded-full p-1 transition-colors duration-300 bg-blue-100 dark:bg-gray-700`}
         >
           <div
             className={`bg-white w-4 h-4 sm:w-6 sm:h-6 rounded-full shadow-md transform transition-transform duration-300 dark:bg-black ${
