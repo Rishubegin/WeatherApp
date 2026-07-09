@@ -69,10 +69,12 @@ export const fetchHourlyData = async (lat, lon) => {
 
 export const fetchNearByCities = async (lat, lon) => {
   const cityData = await fetch(
-    `https://cors-anywhere.herokuapp.com/http://api.geonames.org/findNearbyPlaceNameJSON?lat=${lat}&lng=${lon}&cities=cities15000&radius=200&maxRows=120&username=${USERNAME}`
+    `https://weather-project-server.vercel.app/api/fetchnearbycities?lat=${lat}&lon=${lon}&username=${USERNAME}`,
   );
+
   const json = await cityData.json();
-  return await json;
+  console.log(json);
+  return json;
 };
 
 export function getDateFromOffset(timestamp, offsetInSeconds) {
@@ -510,7 +512,7 @@ export const parseData = (data, dt) => {
 
 export const getCities = async (lat, lon) => {
   const json = await fetchNearByCities(lat, lon);
-  const cities = json?.geonames ?? [];
+  const cities = json.data?.geonames ?? [];
 
   cities.shift(); // remove first city
   cities.sort((a, b) => b.population - a.population);
