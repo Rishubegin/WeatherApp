@@ -7,3 +7,23 @@
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f4f8fc;
+  --navbar: #ffffff;
+  --card: #ffffff;
+  --primary: #2563eb;
+  --accent: #38bdf8;
+  --text: #1e293b;
+  --secondary-text: #64748b;
+}
+
+.dark {
+  --bg: #0f172a;
+  --navbar: #0f1623;
+  --card: #1e293b;
+  --primary: #60a5fa;
+  --accent: #38bdf8;
+  --text: #f8fafc;
+  --secondary-text: #cbd5e1;
+}
