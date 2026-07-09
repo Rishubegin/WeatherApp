@@ -73,7 +73,6 @@ export const fetchNearByCities = async (lat, lon) => {
   );
 
   const json = await cityData.json();
-  console.log(json);
   return json;
 };
 
