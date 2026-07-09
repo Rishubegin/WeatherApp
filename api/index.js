@@ -45,6 +45,4 @@ app.get("/api/fetchnearbycities", async (req, res) => {
   }
 });
 
-app.listen(7777, () => {
-  console.log("server listening on port 7777");
-});
+module.exports = app;
