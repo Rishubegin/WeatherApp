@@ -1,6 +1,16 @@
 const express = require("express");
+const cors = require("cors");
+
 const app = express();
+
 app.use(express.json());
+
+app.use(
+  cors({
+    origin: "https://weather-app-five-murex-73.vercel.app",
+    methods: ["GET"],
+  })
+);
 
 app.get("/api/fetchnearbycities", async (req, res) => {
   const { lat, lon, username } = req.query;
