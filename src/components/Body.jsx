@@ -18,7 +18,7 @@ const Body = () => {
 
   return (
     <div
-      className="max-w-[1500px] w-screen font-(family-name:--font-roboto) overflow-x-hidden dark:bg-gray-950"
+      className="max-w-[1500px] w-screen font-(family-name:--font-roboto) overflow-x-hidden"
       id="body"
     >
       <ThemeCelcius.Provider value={{ units, setUnits }}>
@@ -26,7 +26,7 @@ const Body = () => {
 
         <div className="flex flex-col md:flex-row w-full ">
           <div
-            className="bg-gray-200 mt-4 ml-4 mr-4 md:mr-0 dark:text-white dark:bg-gray-800"
+            className="bg-[var(--card)] text-[var(--text)] mt-4 ml-4 mr-4 md:mr-0 "
             id=""
           >
             <WeatherInfo data={dataFromSearch} />
@@ -38,7 +38,7 @@ const Body = () => {
 
         <div className="flex flex-col lg:flex-row mt-5 ">
           <div
-            className="flex-1 overflow-scroll flex items-end bg-gray-200 text-[#2E2A23] rounded-2xl ml-4 mr-4 mb-4 lg:mb-0 dark:text-white dark:bg-gray-800"
+            className="flex-1 overflow-scroll flex items-end bg-[var(--card)] text-[var(--text)] rounded-2xl ml-4 mr-4 mb-4 lg:mb-0 "
             id="full-day-overview "
           >
             <div className="">
@@ -46,7 +46,7 @@ const Body = () => {
             </div>
           </div>
 
-          <div className="bg-gray-200 ml-2 mr-2 lg:ml-0 dark:text-white dark:bg-gray-800">
+          <div className="bg-[var(--card)] text-[var(--text)] ml-2 mr-2 lg:ml-0">
             <FiveDayOverview data={dataFromSearch} />
           </div>
         </div>
