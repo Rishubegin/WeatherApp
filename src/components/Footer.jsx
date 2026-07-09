@@ -23,7 +23,7 @@ const Info = ({ icon, link, name }) => {
 };
 const Footer = ({ darkMode }) => {
   return (
-    <div className="w-screen flex flex-col sm:flex-row justify-around items-center bg-[var(--navbar)] text-sm sm:text-xl">
+    <div className="w-screen flex flex-col sm:flex-row justify-around items-center bg-[var(--navbar)] text-sm sm:text-xl ">
       <div className="flex w-full sm:w-6/10 md:7/10 justify-around mt-4 mb-2">
         <Info
           icon={darkMode ? LIGHT_GITHUB_ICON : GITHUB_ICON}
