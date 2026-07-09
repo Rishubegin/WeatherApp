@@ -30,7 +30,7 @@ export const fetchWeatherdata = async (lat, lon, units) => {
     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${API_KEY}`
   );
   const json = await data.json();
-  console.log(json.name, ++count);
+  // console.log(json.name, ++count);
   return json;
 };
 
