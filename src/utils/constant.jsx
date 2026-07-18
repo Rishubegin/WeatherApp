@@ -111,3 +111,8 @@ export const DARK_MODE = "dark_mode_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg";
 
 export const LIGHT_MODE =
   "light_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg";
+
+export const DICE_ROLL_DARK_ICON = "dice_roll_dark_icon.png";
+export const DICE_ROLL_LIGHT_ICON = "dice_roll_light_icon.png";
+
+

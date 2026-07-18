@@ -6,12 +6,15 @@ import {
   getExactLocation,
 } from "../../utils/functions";
 
+import { getRandomLocation } from "../../utils/loadCoordinates";
 import { useState, useEffect, useContext } from "react";
 import { ThemeContext } from "../../App";
 import {
   SEARCH_ICON,
   CLOSE_ICON,
   LIGHT_SEARCH_ICON,
+  DICE_ROLL_DARK_ICON,
+  DICE_ROLL_LIGHT_ICON,
 } from "../../utils/constant";
 import countries from "i18n-iso-countries";
 import en from "i18n-iso-countries/langs/en.json";
@@ -105,7 +108,7 @@ const DateAndSearch = ({ sendData }) => {
           </span>
         )}
       </div>
-      <div className="row-start-2 col-start-1 col-end-3 flex flex-col sm:w-1/2 m-3 relative">
+      <div className="row-start-2 col-start-1 col-end-3 flex sm:w-1/2 m-3 relative">
         <div className="flex w-full">
           <input
             placeholder="CityName"
@@ -167,6 +170,23 @@ const DateAndSearch = ({ sendData }) => {
                 </div>
               ))
             : "Searching"}
+        </div>
+        <div id="random-city-search" className="pr-1 pl-4 py-2">
+          <button
+            className=""
+            onClick={async () => {
+              const { lat, lng } = await getRandomLocation();
+              setData(null);
+              sendData(null);
+              await searchQuery(lat, lng, units);
+            }}
+          >
+            <img
+              src={darkMode ? DICE_ROLL_DARK_ICON : DICE_ROLL_LIGHT_ICON}
+              alt="random-search"
+              className="w-10 hover:scale-125 transition-all duration-300 cursor-pointer"
+            />
+          </button>
         </div>
       </div>
 
