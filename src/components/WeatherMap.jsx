@@ -4,6 +4,8 @@ import { Shimmer } from "./Shimmer";
 import { useEffect, useState, useContext } from "react";
 import { ThemeContext } from "../App";
 
+const ACCESS_TOKEN = import.meta.env.JAWG_ACCESS_TOKEN;
+
 const WeatherMap = ({ data }) => {
   const [center, setCenter] = useState(null);
 
@@ -36,7 +38,7 @@ const WeatherMap = ({ data }) => {
           }
           url={
             darkMode
-              ? "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+              ? `https://tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token=cFq4gZ09FeZWK9uAtrpTqH3v9wWDKzwlaxQPKGLeeQ1jEdmsMJ6lmBdfv4xEFQ37`
               : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           }
         />
