@@ -139,7 +139,7 @@ const DateAndSearch = ({ sendData }) => {
           </button>
         </div>
         <div
-          className={`bg-blue-100 p-2 max-h-50 h-fit w-full flex flex-col justify-around absolute top-12 sm:top-15 rounded-md z-10 text-md sm:text-xl overflow-scroll dark:bg-gray-700 ${
+          className={`bg-blue-100 p-2 max-h-50 h-fit w-[calc(100%-56px)] sm:w-[calc(100%-64px)] flex flex-col justify-around absolute top-12 sm:top-15 rounded-md z-10 text-md sm:text-xl overflow-scroll dark:bg-gray-700 ${
             searchResult ? (isHide ? "hidden" : "") : "hidden"
           }`}
         >
