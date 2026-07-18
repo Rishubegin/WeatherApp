@@ -17,11 +17,11 @@ const WeatherMap = ({ data }) => {
 
   return data ? (
     <>
-      <div
+      {/* <div
         className={`absolute w-full h-full bg-[rgba(0,0,0,0.6)] pointer-events-none ${
           darkMode ? "" : "hidden"
         }`}
-      ></div>
+      ></div> */}
       <MapContainer
         key={JSON.stringify(center)}
         center={center}
@@ -29,8 +29,16 @@ const WeatherMap = ({ data }) => {
         className="h-full w-full rounded-2xl absolute -z-10"
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution={
+            darkMode
+              ? "&copy; OpenStreetMap contributors &copy; CARTO"
+              : "&copy; OpenStreetMap contributors"
+          }
+          url={
+            darkMode
+              ? "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+              : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          }
         />
         {/* <Marker position={center}></Marker> */}
       </MapContainer>
@@ -41,3 +49,18 @@ const WeatherMap = ({ data }) => {
 };
 
 export default WeatherMap;
+
+{
+  /* <TileLayer
+  url={
+    darkMode
+      ? https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png
+      : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+  }
+  attribution={
+    darkMode
+      ? '&copy; OpenStreetMap contributors &copy; CARTO'
+      : '&copy; OpenStreetMap contributors'
+  }
+/> */
+}
