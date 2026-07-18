@@ -171,7 +171,7 @@ const DateAndSearch = ({ sendData }) => {
               ))
             : "Searching"}
         </div>
-        <div id="random-city-search" className="pr-1 pl-4 py-2">
+        <div id="random-city-search" className="pr-1 pl-4 sm:py-2 py-1">
           <button
             className=""
             onClick={async () => {
@@ -184,7 +184,7 @@ const DateAndSearch = ({ sendData }) => {
             <img
               src={darkMode ? DICE_ROLL_DARK_ICON : DICE_ROLL_LIGHT_ICON}
               alt="random-search"
-              className="w-10 hover:scale-125 transition-all duration-300 cursor-pointer"
+              className="w-10 sm:w-12 hover:scale-125 transition-all duration-300 cursor-pointer"
             />
           </button>
         </div>
